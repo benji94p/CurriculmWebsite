@@ -9,18 +9,85 @@ body {
 .hide {
     display: none;
 }
+header {
+    height: 170px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.logo {
+    max-width: 100%;
+    width: 200px;
+    margin: 25px 25px;
+    height: auto;
+}
+
+.card_container {
+    margin-bottom: 50px;
+}
+/*LANDING */
+
+.h_card {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.header_landing {
+
+}
 /*LANDING MOBILE */
 @media (max-width: 900px) {
   .how_button {
     display: none;
 }
 
+
 }
 
 /*LANDING DESKTOP*/
+.card{
+    margin: 0 auto;
+}
+@media (min-width: 1200px) {
+.card_container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 40px;
+}
+.card {
+        width: 30vw;
+    }
+    }
+
+@media (max-width: 800px) {
+    .card_container{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-gap: 40px;
+}
+    .card {
+        width: 80vw;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1200px) {
+    .card_container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 40px;
+}
+    .card {
+        width: 45vw;
+    }
+}
+
 
 .card {
   position: relative;
+    background:#e91d62;
+    border:1px solid #979797;
+    box-shadow:5px 5px 4px 0 rgba(0,0,0,0.50);
+    height:220px;
 }
 
 .overlay {
@@ -41,12 +108,15 @@ body {
 }
 
 .text_sub {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
   white-space: nowrap;
   color: white;
   font-size: 20px;
   overflow: hidden;
-  top: 50%;
-  left: 50%;
+  top: 34%;
+  left: 93%;
     position: relative;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
